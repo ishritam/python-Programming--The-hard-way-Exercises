@@ -1,0 +1,300 @@
+1) With_as
+--------------
+
+with open('pythonText.txt','w') as var:
+	var.write("Hello new file")                    #It will creat a File name as pythonText.txt first and then write Hello new file in pythonText.txt
+
+2) assert
+------------
+
+def _age():
+	i_age = int(input("How old are you? >>"))
+	assert i_age > 0 , "Age can't be Negative."
+	print(f"Ok, You are {i_age} years old")
+	
+_age()
+
+
+OUTPUT
+******
+D:\Python>ex37.py
+How old are you? >>-19
+Traceback (most recent call last):
+  File "D:\Python\ex37.py", line 6, in <module>
+    _age()
+  File "D:\Python\ex37.py", line 3, in _age
+    assert i_age > 0 , "Age can't be Negative."
+AssertionError: Age can't be Negative.
+
+3) class
+---------------
+
+class Calculator:
+	def add():
+		a = int(input("First Number >>"))
+		b = int(input("Second Number >>"))
+		print(a + b)
+	def sub():
+		a = int(input("First Number >>"))
+		b = int(input("Second Number >>"))
+		print(a - b)
+Calculator.add()
+Calculator.sub()
+	
+
+
+4) Break
+------------------
+number = 0
+for number in range(10):
+	number = number + 1
+	
+	if number == 5:
+		break      #for break a statement
+	print(number)
+
+print("Out of the loop")
+print(number)
+
+
+5) del
+---------------
+
+a = [1,2,3,4,5]
+del a[2]
+print(a)
+
+D:\Python>ex37.py
+[1, 2, 4, 5]
+
+
+
+>>> a=[1,1,1,2,2,3,4,5,6,6,7,]
+>>> del a[1]
+>>> a
+[1, 1, 2, 2, 3, 4, 5, 6, 6, 7]
+
+6) try:.............except:
+--------------------------------
+
+import math
+num = int(input("Enter the number you want to see the Fatorial:>>"))
+
+try:
+	result = math.factorial(num)
+	print(result)
+except ValueError:
+	print("Negative number is not allowed.")
+
+
+
+
+
+
+7) raise ValueError("Yes")
+-----------------------------
+It's use to raise an exception when the things go wrong.
+
+a= -5
+
+if a <= 0:
+	raise ValueError("Yes")
+else:
+	print("a is a Positive Number")
+	
+	
+8) Finally
+--------------------
+ import math
+ num = int(input("Number >>"))
+ try:
+	result=math.factorial(num)
+	print(result)
+except:
+	print("Number can't be Negative")
+finally:
+	print("Good bye!!")
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+9)Break
+---------------
+i = 0
+for i in range(10):
+	print(i)
+	if i>5:
+		break
+	else:
+		print("Hello")
+	print("Come here")
+
+
+
+D:\Python>ex37.py
+0
+Hello
+Come here
+1
+Hello
+Come here
+2
+Hello
+Come here
+3
+Hello
+Come here
+4
+Hello
+Come here
+5
+Hello
+Come here
+6
+
+
+10) Continue
+-----------------------
+
+i = 0
+for i in range(10):
+	print(i)
+	if i>5:
+		continue
+	else:
+		print("Hello")
+	print("Come here")
+
+
+
+
+D:\Python>ex37.py
+0
+Hello
+Come here
+1
+Hello
+Come here
+2
+Hello
+Come here
+3
+Hello
+Come here
+4
+Hello
+Come here
+5
+Hello
+Come here
+6
+7
+8
+9
+
+11) pass
+--------------------
+i = 0
+for i in range(10):
+	print(i)
+	if i>5:
+		pass
+	else:
+		print("Hello")
+	print("Come here")
+
+
+
+
+
+
+
+D:\Python>ex37.py
+0
+Hello
+Come here
+1
+Hello
+Come here
+2
+Hello
+Come here
+3
+Hello
+Come here
+4
+Hello
+Come here
+5
+Hello
+Come here
+6
+Come here
+7
+Come here
+8
+Come here
+9
+Come here
+
+
+
+12) lambda
+--------------------------
+
+Normal Function->
+						def mult (a,b):
+						return a*b
+						print(mult(2,4))
+						
+				D:\Python>ex37.py
+				8
+
+Lambda Anonymous function->
+						s = lambda a,b:a*b;s(2,4)
+						
+				D:\Python>ex37.py
+				8
+				
+				
+13) map()
+-------------------
+normally
+----------------
+import math
+num=[1,2,3,4,5]
+lst=[]
+def factorial(i):
+	result = math.factorial(i)
+	i+1
+	return result
+
+for i in range(10):
+	a= factorial(i)
+	lst.append(a)
+print(lst)
+
+
+using map()
+---------------------
+import math
+num=[1,2,3,4,5]
+lst=[]
+def factorial(i):
+	result = math.factorial(i)
+	i+1
+	return result
+a= list(map(factorial,num))
+print(a)
+
+
+			
+D:\Python>ex37.py
+[1, 2, 6, 24, 120]

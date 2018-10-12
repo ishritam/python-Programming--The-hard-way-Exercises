@@ -1,0 +1,15 @@
+Assignment. 2
+---------------------------
+>>> import requests as rqs
+>>> from bs4 import BeautifulSoup as bs
+>>> res = rqs.get("https://www.learncodeonline.in")
+>>> soup = bs(res.text,"lxml")
+>>> href = soup.find_all("a", href=True)
+>>> for i in href:
+...     if i["href"]=="#":
+...             pass
+...     else:
+...             if i["href"][0]==".":
+...                     print("https://learncodeonline.in",i["href"][2])
+...             else:
+...                     print(i["href"])?
