@@ -1,4 +1,4 @@
-Hi
-i am shritam
-i am python
-i like you;
+print("Hi")
+print("i am shritam")
+print("i am python")
+print("i like you;")
